@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2</title>
+</head>
+<body>
+    <h1>Promesas Practica 2</h1>
+
+    <div class="p1">
+
+    </div>
+    <div class="p2">
+
+    </div>
+    <span></span>
+
+    <script type="module">
+        //Importamos las funciones de nuestro script temporitzador, es necesario la directiva type="module"
+        import {cuenta, escribirEnPantalla} from "./temporitzador.js";
+        //llamando a las funciones con los elementos de tipo clase, p1 y p2, también una función callback para escribir al final "Fin"
+        cuenta(60,".p2",100,escribirFin);
+        cuenta(6,".p1");
+
+        function escribirFin() {
+            document.querySelector('span').innerHTML='FIN'
+        }
+        
+    </script>
+</body>
+</html>
